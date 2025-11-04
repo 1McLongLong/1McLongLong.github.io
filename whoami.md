@@ -4,7 +4,7 @@ layout: page
 permalink: /whoami
 ---
 
-I am a self-driven, motivated, STEM graduate of The Citadel, with dual degrees in Computer Science and Cyber Operations. I am seeking a challenging position where 3+ years of experience defending and penetrating networks in a competition environment can be fully utilized.
+Aspiring SOC Analyst based in Casablanca with a strong commitment to enhancing Cybersecurity measures and protecting organizational assets. Strong foundation in log monitoring, incident response, and maintaining security information and event management systems. Eager to apply analytical and problem-solving skills in a SOC team and continuously learn new tools to detect and mitigate threats.
 
 # Education
 

@@ -1,5 +1,5 @@
-title: "Zachs Portfolio"
-description: "This is Zachary Schellinger's web portfolio!"
+title: "Taha's Portfolio"
+description: "This is Taha Ouahmane's web portfolio!"
 remote_theme: b2a3e8/jekyll-theme-console
 
 header_pages:
@@ -7,9 +7,9 @@ header_pages:
   - contact.md
   - whoami.md
 
-footer: 'Find me on <a href="https://www.linkedin.com/in/zach-schellinger">LinkedIn</a> <a href="https://github.com/Zmschellinger">GitHub</a> <a href="https://tryhackme.com/p/Zmschellinger">TryHackMe</a>'
+footer: 'Find me on <a href="https://www.linkedin.com/in/taha-ouahmane">LinkedIn</a> <a href="https://github.com/1McLongLong">GitHub</a> <a href="https://tryhackme.com/p/Mclonglong">TryHackMe</a>'
 
 # Build settings
 markdown: kramdown
-style: dark
+style: nord
 listen_for_clients_preferred_style: true

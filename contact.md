@@ -8,8 +8,8 @@ permalink: /contact
 
 ````
       _________
-    .`.        `.    Email - Zmschellinger@gmail.com
-   /   \ .======.\   Phone - (803)716-7239
+    .`.        `.    Email - taha.ouahmane@gmail.com
+   /   \ .======.\   Phone - +212 6 82 32 43 45
    |   | |______||
    |   |   _____ |
    |   |  /    / |
