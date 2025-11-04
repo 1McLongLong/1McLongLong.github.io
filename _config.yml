@@ -1,0 +1,15 @@
+title: "Zachs Portfolio"
+description: "This is Zachary Schellinger's web portfolio!"
+remote_theme: b2a3e8/jekyll-theme-console
+
+header_pages:
+  - index.md
+  - contact.md
+  - whoami.md
+
+footer: 'Find me on <a href="https://www.linkedin.com/in/zach-schellinger">LinkedIn</a> <a href="https://github.com/Zmschellinger">GitHub</a> <a href="https://tryhackme.com/p/Zmschellinger">TryHackMe</a>'
+
+# Build settings
+markdown: kramdown
+style: dark
+listen_for_clients_preferred_style: true
