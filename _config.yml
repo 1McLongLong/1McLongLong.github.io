@@ -12,5 +12,5 @@ footer: 'Find me on <a href="https://www.linkedin.com/in/taha-ouahmane">LinkedIn
 
 # Build settings
 markdown: kramdown
-style: nord
+style: light
 listen_for_clients_preferred_style: false
