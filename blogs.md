@@ -1,7 +1,7 @@
 ---
-title: /myblogs
+title: /blogs
 layout: page
-permalink: /myblogs
+permalink: /blogs
 ---
 
 ```
@@ -22,6 +22,6 @@ permalink: /myblogs
 ### [Noxious - LLMNR Poisoning Investigation](/blogs/blog1)
 **Posted on:** February 01, 2026
 
-Welcome to my first blog post! In this entry, I'm sharing some thoughts on and the journey that led me to build this portfolio.
+A detailed network forensics investigation of an LLMNR poisoning attack in Active Directory. Analyze PCAP data to identify rogue devices, extract compromised credentials, and trace the complete attack chain from initial compromise to password cracking.
 
 *More blogs coming soon! 🚀*
