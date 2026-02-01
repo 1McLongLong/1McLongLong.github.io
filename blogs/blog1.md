@@ -32,13 +32,13 @@ Table of Contents
 
 1.1 Knowledge Requirements
 
--   Basic networking fundamentals (IP addresses, protocols, ports)
+-  Basic networking fundamentals (IP addresses, protocols, ports)
 
--   Understanding of TCP/IP communication
+-  Understanding of TCP/IP communication
 
--   Familiarity with Wireshark interface and basic filtering
+-  Familiarity with Wireshark interface and basic filtering
 
--   Basic understanding of Windows networking concepts
+-  Basic understanding of Windows networking concepts
 
 1.2 Skills Required
 
