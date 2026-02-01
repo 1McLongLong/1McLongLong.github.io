@@ -6,6 +6,7 @@ header_pages:
   - index.md
   - whoami.md
   - projects.md
+  - myblogs.md
   - contact.md
 
 footer: 'Find me on <a href="https://www.linkedin.com/in/taha-ouahmane">LinkedIn</a> <a href="https://github.com/1McLongLong">GitHub</a> <a href="https://tryhackme.com/p/Mclonglong">TryHackMe</a>'
