@@ -4,43 +4,52 @@ layout: page
 permalink: /blogs/blog1
 ---
 
-**Noxious - LLMNR Poisoning Investigation**
+```
+ _______________________________________________
+/                                               \
+|    __________________________________________   |
+|   |                                         |   |
+|   |    🔍 LLMNR Poisoning Investigation 🔍  |   |
+|   |                                         |   |
+|   |       Network Forensics Deep Dive       |   |
+|   |_________________________________________|   |
+\                                               /
+ -----------------------------------------------
+```
 
 This writeup documents a network forensics investigation of an LLMNR Poisoning attack in an Active Directory environment. The investigation involved analyzing packet capture (PCAP) data to identify a rogue device, extract compromised credentials, and understand the complete attack chain from initial compromise to password cracking.
 
-Table of Contents
+## 📋 Table of Contents
 
-1.  Prerequisites
+1. [Prerequisites](#prerequisites)
+2. [Core Concepts](#core-concepts)
+3. [Tools Required](#tools-required)
+4. [Attack Overview](#attack-overview)
+5. [Investigation Questions & Analysis](#investigation-questions--analysis)
+6. [Key Findings](#key-findings-summary)
+7. [Lessons Learned](#lessons-learned)
 
-2.  Core Concepts
+---
 
-3.  Tools Required
+## Prerequisites
 
-4.  Attack Overview
-
-5.  Investigation Questions & Analysis
-
-6.  Key Findings
-
-7.  Lessons Learned
-
-1. Prerequisites
-
-1.1 Knowledge Requirements
+### 1.1 Knowledge Requirements
 
 - Basic networking fundamentals (IP addresses, protocols, ports)
 - Understanding of TCP/IP communication
 - Familiarity with Wireshark interface and basic filtering
 - Basic understanding of Windows networking concepts
 
-1.2 Skills Required
+### 1.2 Skills Required
 
 - Packet capture analysis
 - Display filter creation in Wireshark
 - Basic command-line usage
 - Understanding of hash formats and password cracking concepts
 
-2. Core Concepts
+---
+
+## Core Concepts
 
 2.1 Active Directory Environment
 
@@ -87,19 +96,23 @@ To crack an NTLMv2 hash, we need to extract and combine several values:
 - NTProofStr - First 16 bytes of NTLMv2 Response
 - NTLMv2 Response - Full encrypted response (minus first 16 bytes for hash format)
 
-3. Tools Required
+---
 
-3.1 Analysis Tools
+## Tools Required
 
-- Wireshark - Network protocol analyzer for PCAP analysis
-- Hashcat - Password recovery tool for cracking NTLMv2 hashes
-- Text editor - For creating hash files
+### 3.1 Analysis Tools
 
-3.2 Required Resources
+- **Wireshark** - Network protocol analyzer for PCAP analysis
+- **Hashcat** - Password recovery tool for cracking NTLMv2 hashes
+- **Text editor** - For creating hash files
 
-- rockyou.txt wordlist - Common password dictionary for hash cracking
+### 3.2 Required Resources
 
-4. The LLMNR Poisoning Attack
+- **rockyou.txt** - Common password dictionary for hash cracking
+
+---
+
+## The LLMNR Poisoning Attack
 
 4.1 Attack Flow
 
@@ -122,9 +135,15 @@ The attack follows this sequence:
 - Users commonly make typos when typing server names
 - The attack is passive - difficult to detect without proper monitoring
 
-5. Investigation: Questions & Analysis
+---
 
-Question 1: Identify the Malicious IP Address
+## Investigation: Questions & Analysis
+
+```
+╔═══════════════════════════════════════════════════╗
+║        QUESTION 1: MALICIOUS IP ADDRESS           ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Find the IP address of the rogue machine running the Responder tool.
 
@@ -143,7 +162,13 @@ Question 1: Identify the Malicious IP Address
 
 **Answer: 172.17.79.135**
 
-Question 2: What is the hostname of the rogue machine?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║          QUESTION 2: ROGUE MACHINE HOSTNAME       ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Determine the actual hostname of the attacker's machine.
 
@@ -155,7 +180,13 @@ Question 2: What is the hostname of the rogue machine?
 
 **Answer: kali**
 
-Question 3: What is the username whose hash was captured?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║        QUESTION 3: CAPTURED USERNAME              ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Determine which user's credentials were captured.
 
@@ -168,7 +199,13 @@ Question 3: What is the username whose hash was captured?
 
 **Answer: john.deacon**
 
-Question 4: When were the hashes captured the first time?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║           QUESTION 4: CAPTURE TIMESTAMP           ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Find when the credentials were first captured.
 
@@ -185,7 +222,13 @@ Multiple NTLM negotiations occur in quick succession as the victim's machine rep
 
 **Answer: 2024-06-24 11:18:30**
 
-Question 5: What was the typo made by the victim when navigating to the file share?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║            QUESTION 5: VICTIM'S TYPO              ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Determine what the victim mistyped that triggered the attack.
 
@@ -201,7 +244,13 @@ The victim typed DCC01 instead of DC01 - a simple one-character typo that enable
 
 **Answer: DCC01**
 
-Question 6: What is the NTLM server challenge value?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║         QUESTION 6: SERVER CHALLENGE VALUE        ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Extract the server challenge value needed for hash cracking.
 
@@ -212,7 +261,13 @@ Question 6: What is the NTLM server challenge value?
 
 **Answer: 601019d191f054f1**
 
-Question 7: What is the NTProofStr value?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║             QUESTION 7: NTPROOFSTR VALUE          ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Extract the NTProofStr value from the authentication response.
 
@@ -222,7 +277,13 @@ Question 7: What is the NTProofStr value?
 
 **Answer: c0cc803a6d9fb5a9082253a04dbd4cd4**
 
-Question 8: Crack the Password
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║            QUESTION 8: PASSWORD CRACKING          ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Reconstruct the NTLMv2 hash and crack it to recover the plaintext password.
 
@@ -247,7 +308,13 @@ john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:0101000000
 
 **Answer: NotMyPassword0k?** (The Hashcat result shows the password with a small k, HTB accepts the password anyway but i don't know who's in the wrong.)
 
-Question 9: What is the actual file share that the victim was trying to navigate to?
+---
+
+```
+╔═══════════════════════════════════════════════════╗
+║           QUESTION 9: ACTUAL FILE SHARE           ║
+╚═══════════════════════════════════════════════════╝
+```
 
 **Objective:** Determine what file share the victim was actually trying to access.
 
@@ -260,7 +327,9 @@ Question 9: What is the actual file share that the victim was trying to navigate
 
 **Answer: \\DC01\DC-Confidential**
 
-6. Key Findings Summary
+---
+
+## Key Findings Summary
 
 6.1 Attack Timeline
 
@@ -295,7 +364,9 @@ Complete attack sequence occurred:
 - DHCP - Network configuration (revealed attacker hostname)
 - DNS - Normal name resolution (for comparison)
 
-7. Lessons Learned
+---
+
+## Lessons Learned
 
 7.1 Technical Insights
 
@@ -313,7 +384,9 @@ Complete attack sequence occurred:
 - Focus on the FIRST occurrence when multiple similar events exist
 - Understanding protocol structure is essential for extracting hash components
 
-8. Conclusion
+---
+
+## Conclusion
 
 This investigation successfully identified and analyzed an LLMNR Poisoning attack in an Active Directory environment. Through systematic packet analysis, we traced the complete attack chain from initial typo to password compromise. The investigation demonstrated that a single-character typing error combined with insecure default protocols can lead to credential theft.
 
@@ -321,23 +394,35 @@ Key takeaways include the importance of disabling legacy protocols like LLMNR, i
 
 This analysis reinforces that network security requires both technical controls (disabling LLMNR, SMB signing) and user awareness (recognizing typos, understanding authentication risks). Organizations must assume breach and implement monitoring capabilities to detect such attacks in progress.
 
-9. References & Resources
+---
 
-9.1 Tools Documentation
+## References & Resources
 
-- Hashcat Documentation: https://hashcat.net/wiki/
-- Responder Tool: https://github.com/lgandx/Responder
+### 9.1 Tools Documentation
 
-9.2 Protocol References
+- [Hashcat Documentation](https://hashcat.net/wiki/)
+- [Responder Tool](https://github.com/lgandx/Responder)
+
+### 9.2 Protocol References
 
 - RFC 4795 - Link-Local Multicast Name Resolution (LLMNR)
 - Microsoft NTLM Documentation
 - SMB2/3 Protocol Specifications
 
-9.3 Additional Learning Resources
+### 9.3 Additional Learning Resources
 
 - MITRE ATT&CK T1557.001 - LLMNR/NBT-NS Poisoning
 - Active Directory Security Best Practices
 
+---
+
+```
+ _______________________________________________
+/                                               \
+|                                               |
+|         ✓ Investigation Complete              |
+|                                               |
+\_______________________________________________/
+```
 
 [← Back to Blogs](/myblogs)

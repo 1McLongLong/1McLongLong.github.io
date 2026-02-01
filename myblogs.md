@@ -24,8 +24,4 @@ permalink: /myblogs
 
 Welcome to my first blog post! In this entry, I'm sharing some thoughts on and the journey that led me to build this portfolio.
 
----
-
----
-
 *More blogs coming soon! 🚀*
