@@ -31,7 +31,7 @@ This writeup documents a network forensics investigation of an LLMNR Poisoning a
 
 ---
 
-## Prerequisites
+# Prerequisites
 
 ### 1.1 Knowledge Requirements
 
@@ -49,7 +49,7 @@ This writeup documents a network forensics investigation of an LLMNR Poisoning a
 
 ---
 
-## Core Concepts
+# Core Concepts
 
 2.1 Active Directory Environment
 
@@ -98,7 +98,7 @@ To crack an NTLMv2 hash, we need to extract and combine several values:
 
 ---
 
-## Tools Required
+# Tools Required
 
 ### 3.1 Analysis Tools
 
@@ -112,7 +112,7 @@ To crack an NTLMv2 hash, we need to extract and combine several values:
 
 ---
 
-## The LLMNR Poisoning Attack
+# The LLMNR Poisoning Attack
 
 4.1 Attack Flow
 
@@ -137,7 +137,7 @@ The attack follows this sequence:
 
 ---
 
-## Investigation: Questions & Analysis
+# Investigation: Questions & Analysis
 
 ```
 ╔═══════════════════════════════════════════════════╗
@@ -329,7 +329,7 @@ john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:0101000000
 
 ---
 
-## Key Findings Summary
+# Key Findings Summary
 
 6.1 Attack Timeline
 
@@ -366,7 +366,7 @@ Complete attack sequence occurred:
 
 ---
 
-## Lessons Learned
+# Lessons Learned
 
 7.1 Technical Insights
 
@@ -386,7 +386,7 @@ Complete attack sequence occurred:
 
 ---
 
-## Conclusion
+# Conclusion
 
 This investigation successfully identified and analyzed an LLMNR Poisoning attack in an Active Directory environment. Through systematic packet analysis, we traced the complete attack chain from initial typo to password compromise. The investigation demonstrated that a single-character typing error combined with insecure default protocols can lead to credential theft.
 
@@ -396,7 +396,7 @@ This analysis reinforces that network security requires both technical controls 
 
 ---
 
-## References & Resources
+# References & Resources
 
 ### 9.1 Tools Documentation
 
