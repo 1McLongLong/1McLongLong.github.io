@@ -425,4 +425,4 @@ This analysis reinforces that network security requires both technical controls 
 \_______________________________________________/
 ```
 
-[← Back to Blogs](/myblogs)
+[← Back to Blogs](/blogs)
