@@ -19,7 +19,7 @@ permalink: /blogs/blog1
 
 This writeup documents a network forensics investigation of an LLMNR Poisoning attack in an Active Directory environment. The investigation involved analyzing packet capture (PCAP) data to identify a rogue device, extract compromised credentials, and understand the complete attack chain from initial compromise to password cracking.
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Prerequisites](#prerequisites)
 2. [Core Concepts](#core-concepts)
