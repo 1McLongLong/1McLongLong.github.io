@@ -6,14 +6,14 @@ permalink: /blogs
 
 ```
  _______________________________________________
-/                                               \
+/                                                \
 |    __________________________________________   |
 |   |                                         |   |
 |   |      📚 Welcome to My Blogs 📚           |   |
 |   |                                         |   |
 |   |       Thoughts, tutorials & ideas       |   |
 |   |_________________________________________|   |
-\                                               /
+\                                                /
  -----------------------------------------------
 ```
 
@@ -25,7 +25,7 @@ A detailed network forensics investigation of an LLMNR poisoning attack in Activ
 
 **Posted on:** February 01, 2026
 
---------------------------------------------------------------------------------
+---
 
 ### [Telly - CVE-2026-24061 PCAP Analysis](/blogs/blog2)
 

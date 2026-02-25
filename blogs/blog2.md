@@ -6,14 +6,14 @@ permalink: /blogs/blog2
 
 ```
  _______________________________________________
-/                                               \
+/                                                \
 |    __________________________________________   |
 |   |                                         |   |
-|   |  🔒 Telnet Exploitation & Data Theft 🔒 |   |
+|   |  🔒 Telnet Exploitation & Data Theft 🔒  |   |
 |   |                                         |   |
 |   |    CVE-2026-24061 Attack Analysis       |   |
 |   |_________________________________________|   |
-\                                               /
+\                                                /
  -----------------------------------------------
 ```
 
@@ -33,8 +33,6 @@ This writeup documents a complete attack chain analysis involving CVE-2026-24061
 9. [Task 7 — Data Exfiltration Time](#task-7--data-exfiltration-time)
 10. [Task 8 — Credit Card Number](#task-8--credit-card-number)
 11. [Full Attack Chain Summary](#full-attack-chain-summary)
-
----
 
 ---
 
@@ -112,8 +110,6 @@ The system `motd` (message of the day) timestamp embedded in the login banner is
 ```
 
 **Question:** What is the hostname of the targeted server?
-
-**Answer:** `backup-secondary`
 
 ### How to find it
 Multiple places reveal this:
@@ -212,9 +208,8 @@ The script output visible in the stream shows it:
 
 The linper.sh script output in the Telnet session explicitly shows the C2 IP being configured:
 ```
-91.99.25.54
+91.99.25.54 appearing as the target IP when persistence methods are installed.
 ```
-appearing as the target IP when persistence methods are installed.
 
 **Answer: 91.99.25.54**
 
@@ -400,4 +395,4 @@ This analysis reinforces that legacy protocols represent unacceptable risk in mo
 \_______________________________________________/
 ```
 
-[← Back to Blogs](/myblogs)
+[← Back to Blogs](/blogs)

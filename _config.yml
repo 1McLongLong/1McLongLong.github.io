@@ -9,7 +9,7 @@ header_pages:
   - projects.md
   - contact.md
 
-footer: 'Find me on <a href="https://www.linkedin.com/in/taha-ouahmane">LinkedIn</a> <a href="https://github.com/1McLongLong">GitHub</a> <a href="https://tryhackme.com/p/Mclonglong">TryHackMe</a>'
+footer: 'Find me on <a href="www.linkedin.com/in/touahmane">LinkedIn</a> <a href="https://github.com/1McLongLong">GitHub</a> <a href="https://tryhackme.com/p/Mclonglong">TryHackMe</a>'
 
 # Build settings
 markdown: kramdown
