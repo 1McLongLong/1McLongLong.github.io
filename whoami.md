@@ -4,22 +4,7 @@ layout: page
 permalink: /whoami
 ---
 
-```
-                    ...    *    .   _  .
-                 *  .  *     .   * (_)   *
-                   .      |*  ..   *   ..
-                    .  * \|  *  ___  . . *
-                 *   \/   |/ \/{o,o}     .
-                   _\_\   |  / /)  )* _/_ *
-                       \ \| /,--"-"---  ..
-                 _-----`  |(,__,__/__/_ .
-                        \ ||      ..
-                         ||| .            *
-                         |||
-                         |||
-                   , -=-~' .-^- _
-
-```
+![Security Animation](/assets/0x7D.gif)
 
 Aspiring SOC Analyst based in Casablanca with a strong commitment to enhancing Cybersecurity measures and protecting organizational assets. Strong foundation in log monitoring, incident response, and maintaining security information and event management systems. Eager to apply analytical and problem-solving skills in a SOC team and continuously learn new tools to detect and mitigate threats.
 
