@@ -4,7 +4,7 @@ layout: page
 permalink: /blogs
 ---
 
-<img src="/assets/hearts.gif" alt="Security Animation" style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+<img src="/assets/hearts.gif" alt="Security Animation" style="width: 100%; height: auto; display: block; margin: 0 auto;">
 
 ## Latest Posts
 

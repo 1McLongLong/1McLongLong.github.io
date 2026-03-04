@@ -4,24 +4,7 @@ layout: page
 permalink: /projects
 ---
 
-```
-                 _______________________________________________
-                /                                               \
-               |    __________________________________________   |
-               |   |                                         |   |
-               |   |                /\   /\                  |   |
-               |   |               ( o   o )                 |   |
-               |   |                >  ^  <                  |   |
-               |   |               /       \                 |   |
-               |   |              /  /   \  \                |   |
-               |   |             (___/     \___)             |   |
-               |   |                                         |   |
-               |   |       "Here are some of my projects"    |   |
-               |   |_________________________________________|   |
-               |                                                 |
-                \_______________________________________________/
-
-```
+<img src="/assets/eve.gif" alt="Security Animation" style="width: 100%; height: auto; display: block; margin: 0 auto;">
 
 # Projects
 

@@ -11,7 +11,7 @@ header_pages:
 
 footer: 'Find me on <a href="https://linkedin.com/in/touahmane">LinkedIn</a> <a href="https://github.com/1McLongLong">GitHub</a> <a href="https://tryhackme.com/p/Mclonglong">TryHackMe</a>'
 
-# Build settings
+# Build settings 
 markdown: kramdown
 style: dark
 listen_for_clients_preferred_style: false
