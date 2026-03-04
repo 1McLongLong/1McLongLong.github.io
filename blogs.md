@@ -4,18 +4,7 @@ layout: page
 permalink: /blogs
 ---
 
-```
- _______________________________________________
-/                                                \
-|    __________________________________________   |
-|   |                                         |   |
-|   |      📚 Welcome to My Blogs 📚           |   |
-|   |                                         |   |
-|   |       Thoughts, tutorials & ideas       |   |
-|   |_________________________________________|   |
-\                                                /
- -----------------------------------------------
-```
+<img src="/assets/hearts.gif" alt="Security Animation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
 
 ## Latest Posts
 
