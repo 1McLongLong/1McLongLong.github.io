@@ -6,6 +6,9 @@ permalink: /contact
 
 # Contact Information
 
+<img src="/assets/callme.gif" alt="Security Animation" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+
+
 ````
       _________
     .`.        `.    Email - taha.ouahmane@gmail.com
