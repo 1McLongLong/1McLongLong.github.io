@@ -22,17 +22,16 @@ This writeup documents a complete attack chain analysis involving CVE-2026-24061
 ---
 
 ## Table of Contents
-1. [Prerequisites & Background](#prerequisites--background)
-2. [Initial Recon — Opening the PCAP](#initial-recon--opening-the-pcap)
-3. [Task 1 — CVE Identification](#task-1--cve-identification)
-4. [Task 2 — Time of Exploitation](#task-2--time-of-exploitation)
-5. [Task 3 — Target Hostname](#task-3--target-hostname)
-6. [Task 4 — Backdoor Account](#task-4--backdoor-account)
-7. [Task 5 — Persistence Script Download](#task-5--persistence-script-download)
-8. [Task 6 — C2 IP Address](#task-6--c2-ip-address)
-9. [Task 7 — Data Exfiltration Time](#task-7--data-exfiltration-time)
-10. [Task 8 — Credit Card Number](#task-8--credit-card-number)
-11. [Full Attack Chain Summary](#full-attack-chain-summary)
+1. [Prerequisites](#prerequisites)
+2. [Task 1 — CVE Identification](#task-1--cve-identification)
+3. [Task 2 — Time of Exploitation](#task-2--time-of-exploitation)
+4. [Task 3 — Target Hostname](#task-3--target-hostname)
+5. [Task 4 — Backdoor Account](#task-4--backdoor-account)
+6. [Task 5 — Persistence Script Download](#task-5--persistence-script-download)
+7. [Task 6 — C2 IP Address](#task-6--c2-ip-address)
+8. [Task 7 — Data Exfiltration Time](#task-7--data-exfiltration-time)
+9. [Task 8 — Credit Card Number](#task-8--credit-card-number)
+10. [Full Attack Chain Summary](#Key-Findings-Summary)
 
 ---
 
@@ -371,13 +370,13 @@ This analysis reinforces that legacy protocols represent unacceptable risk in mo
 
 # References & Resources
 
-### 9.1 Vulnerability Information
+### 8.1 Vulnerability Information
 
 - CVE-2026-24061 - Telnet Authentication Bypass
 - Ubuntu Security Advisories
 - National Vulnerability Database (NVD)
 
-### 9.3 Attack Techniques
+### 8.2 Attack Techniques
 
 - MITRE ATT&CK T1021.004 - Remote Services: SSH (Telnet similar)
 - MITRE ATT&CK T1053 - Scheduled Task/Job (cron persistence)

@@ -398,18 +398,18 @@ This analysis reinforces that network security requires both technical controls 
 
 # References & Resources
 
-### 9.1 Tools Documentation
+### 8.1 Tools Documentation
 
 - [Hashcat Documentation](https://hashcat.net/wiki/)
 - [Responder Tool](https://github.com/lgandx/Responder)
 
-### 9.2 Protocol References
+### 8.2 Protocol References
 
 - RFC 4795 - Link-Local Multicast Name Resolution (LLMNR)
 - Microsoft NTLM Documentation
 - SMB2/3 Protocol Specifications
 
-### 9.3 Additional Learning Resources
+### 8.3 Additional Learning Resources
 
 - MITRE ATT&CK T1557.001 - LLMNR/NBT-NS Poisoning
 - Active Directory Security Best Practices
