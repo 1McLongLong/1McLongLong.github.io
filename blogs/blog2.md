@@ -2,7 +2,11 @@
 title: Telly - Monitoring Service PCAP Analysis - CVE-2026-24061
 layout: page
 permalink: /blogs/blog2
+date: 2026-02-24
+tags: [pcap-analysis, cve, telnet]
 ---
+
+*📖 10 min read*
 
 ```
  _______________________________________________

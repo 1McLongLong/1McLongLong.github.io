@@ -2,7 +2,11 @@
 title: Noxious - LLMNR Poisoning Investigation
 layout: page
 permalink: /blogs/blog1
+date: 2026-02-01
+tags: [network-forensics, llmnr, active-directory]
 ---
+
+*📖 12 min read*
 
 ```
  _______________________________________________
@@ -297,9 +301,15 @@ The victim typed DCC01 instead of DC01 - a simple one-character typo that enable
 
 **Hash Format:**
 
+```text
 john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:0101000000...
+```
 
 **Hashcat Command Breakdown:**
+
+```bash
+hashcat -a 0 -m 5600 hash.txt rockyou.txt
+```
 
 - -a 0: Dictionary attack mode
 - -m 5600: NTLMv2 hash type
