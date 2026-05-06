@@ -8,18 +8,7 @@ tags: [network-forensics, llmnr, active-directory]
 
 *📖 12 min read*
 
-```
- _______________________________________________
-/                                               \
-|    __________________________________________   |
-|   |                                         |   |
-|   |    🔍 LLMNR Poisoning Investigation 🔍  |   |
-|   |                                         |   |
-|   |       Network Forensics Deep Dive       |   |
-|   |_________________________________________|   |
-\                                               /
- -----------------------------------------------
-```
+<img src="../assets/eyes.jpg" alt="eyes" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
 
 This writeup documents a network forensics investigation of an LLMNR Poisoning attack in an Active Directory environment. The investigation involved analyzing packet capture (PCAP) data to identify a rogue device, extract compromised credentials, and understand the complete attack chain from initial compromise to password cracking.
 
