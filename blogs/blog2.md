@@ -8,7 +8,8 @@ tags: [pcap-analysis, cve, telnet]
 
 *📖 10 min read*
 
-<img src="../assets/csm.webp" alt="eyes" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+<!-- <img src="../assets/csm.webp" alt="eyes" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"> -->
+<img src="../assets/csm.webp" alt="eyes" style="max-width: 100% !important; height: auto; display: block; margin: 0 auto;">
 
 This writeup documents a complete attack chain analysis involving CVE-2026-24061, a critical authentication bypass vulnerability in the Telnet daemon. The investigation covers initial exploitation, persistence establishment, and sensitive data exfiltration through PCAP analysis.
 
